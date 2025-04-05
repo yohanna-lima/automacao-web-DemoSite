@@ -1,3 +1,3 @@
-# Automaçãoo web
+# Automação web
 
-Projeto de automação do site Automation Demo Site (https://demo.automationtesting.in/) para prática do conteúdo deautomação com Selenium WebDriver.
+Projeto de automação do site "Automation Demo Site" (https://demo.automationtesting.in/) para a prática do conteúdo de automação com Selenium WebDriver.
