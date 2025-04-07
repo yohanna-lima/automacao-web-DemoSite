@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.demoSite.registro.register
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.008 s <<< FAILURE! -- in com.demoSite.registro.register
+com.demoSite.registro.register -- Time elapsed: 0.008 s <<< ERROR!
+org.junit.platform.commons.JUnitException: @BeforeAll method 'public void com.demoSite.registro.register.setup()' must be static unless the test class is annotated with @TestInstance(Lifecycle.PER_CLASS).
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1117)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
