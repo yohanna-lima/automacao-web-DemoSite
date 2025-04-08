@@ -1,9 +1,17 @@
 package com.demoSite.registro;
 
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class components {
+import static com.demoSite.driver.DriverFactory.getDriver;
+
+public class Components {
+
+    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/h1")
+    private WebElement pageTitle;
+    
     // Campos obrigatórios
     @FindBy(xpath = "//*[@id=\"basicBootstrapForm\"]/div[1]/div[1]/input")
     private WebElement fieldFirstName;
@@ -41,9 +49,20 @@ public class components {
     // private WebElement fieldPhoto;
 
     // Métodos para interagir com os componentes
+    
+    public Components() {
+        PageFactory.initElements(getDriver(), this);
+    }
+
+    public void validatePageTitle(String expectedTitle) {
+        String actual = pageTitle.getText();
+        Assertions.assertEquals(expectedTitle, actual, "O título exibido na página está incorreto!");
+    }
+    
     public void mandatoryFields(String firstName, String lastName) {
         fieldFirstName.sendKeys(firstName);
         fieldLastName.sendKeys(lastName);
+
     }
 
 }

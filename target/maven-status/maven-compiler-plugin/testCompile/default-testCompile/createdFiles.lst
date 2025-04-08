@@ -1,2 +1,2 @@
-com\demoSite\registro\register.class
-com\demoSite\registro\components.class
+com\demoSite\registro\Components.class
+com\demoSite\registro\RegisterTest.class
